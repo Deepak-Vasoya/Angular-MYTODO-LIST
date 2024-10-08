@@ -1,19 +1,25 @@
 import { NgModule } from '@angular/core';
-import { BrowserModule, provideClientHydration } from '@angular/platform-browser';
-
+import { BrowserModule } from '@angular/platform-browser';
+import { FormsModule } from '@angular/forms';
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
+import {TodosComponent } from './myComponents/todos/todos.component';
+import {TodoItemComponent } from './myComponents/todo-item/todo-item.component'
+import { AddTodoComponent } from './myComponents/add-todo/add-todo.component';
+
+
 
 @NgModule({
   declarations: [
-    AppComponent
+    AppComponent, TodosComponent, TodoItemComponent, AddTodoComponent
   ],
   imports: [
     BrowserModule,
-    AppRoutingModule
+    AppRoutingModule, 
+    FormsModule
   ],
   providers: [
-    provideClientHydration()
+
   ],
   bootstrap: [AppComponent]
 })
