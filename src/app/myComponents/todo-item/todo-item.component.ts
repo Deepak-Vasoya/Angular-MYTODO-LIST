@@ -10,12 +10,17 @@ import { Todo } from '../../Todo';
 export class TodoItemComponent {
 
   @Input() todo: Todo;
+  @Input() i:  number;
   @Output() todoDelete: EventEmitter<Todo> = new EventEmitter();
+  @Output() todoCheckbox: EventEmitter<Todo> = new EventEmitter();
 
   onclick(todo: Todo) {
     console.log("On Clcik has been trigerred.")
     this.todoDelete.emit(todo);
   }
   
+  onCheckboxClick(todo){
+    this.todoCheckbox.emit(todo);
+  }
 
 }
