@@ -10,8 +10,8 @@ import { Todo } from '../../Todo';
 export class AddTodoComponent {
 
   @Output() todoAdd: EventEmitter<Todo> = new EventEmitter();
-  title:string;
-  description:string;
+  title:string = "";
+  description:string = "";
 
   onSubmit(){
     const todo = {
